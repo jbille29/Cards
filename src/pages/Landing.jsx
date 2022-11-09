@@ -5,9 +5,11 @@ import Navbar from '../components/Navbar'
 import ProductTile from '../components/ProductTile'
 import heroIm from '../assets/hero-im.png'
 
+import productData from '../productData'
+
 const Landing = () => {
 
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState(productData)
 
     const loadProducts = async() => {
         try {
@@ -21,7 +23,7 @@ const Landing = () => {
    
     useEffect(()=>{
         // load cards from api
-        loadProducts()
+        //loadProducts()
     }, [])
 
     return (
